@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS OF MY FIRST PAGE</title>
+<style>
+  #dev {
+    color:bisque ;
+    background-color: aqua !important;
+    height:100px;
+    width:200px;
+  }
+</style>
+
+</head>
+<body>
+  <h3>this a css </h3>
+  <p id="dev">this is a css page of inline internal external</p>
+
+
+
+
+</body>
+</html>
