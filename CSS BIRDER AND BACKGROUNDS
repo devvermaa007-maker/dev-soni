@@ -7,7 +7,7 @@
   <title>CSS OF MY FIRST PAGE</title>
   <style>
     #dev {
-      color: bisque;
+      color: blue;
       background-color: blue;
       height: 200px;
       width: 200px;
