@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/CSS%20FLOAT%20AND%20CLEAR.HTML -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALIENGMENT</title>
+
+  <style>
+    *{
+     box-sizing: border-box;
+    }
+    .container{
+        width:1000px;
+        border:3px solid purple;
+        margin: 33px auto;/* agar container ko beech main lana ho to iska use karte hai margin auto*/
+background-color: rgb(5, 201, 178);
+    }
+    .item{
+        border: 3px solid grey;
+        margin: 12px 3px;
+        padding: 12px 3px;
+       background: rgb(248 238 238);
+       
+
+    }
+    #fruits{
+        
+        float:left;
+        width: 48%;
+    }
+    #computer{
+        clear: both;
+
+        width: 40%;
+    }
+    #stationary{
+            clear: both;
+        width: 100%;
+    }
+    p,h3{    
+        text-align: left;
+        text-align: right;
+        text-align: center;
+        text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+    
+  <div class="container">
+    <h1 style="margin: auto;
+    width:455px;">WELCOME TO MY STORE</h1>
+    
+    <div id="fruits" class="item">
+        <h3>fruits</h3>
+        <p id="fruitspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam aspernatur mollitia eius quas blanditiis, a ex maiores id placeat iure quaerat quibusdam, sapiente ullam delectus est! Harum, earum iste.    
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor consequatur optio, ut possimus molestiae explicabo omnis quia! Optio repudiandae commodi sit obcaecati aliquam non temporibus vitae consectetur. Unde assumenda numquam tenetur fugiat corporis!
+
+        </p>
+    </div>
+    <div id="Computer" class="item">
+    
+        <p id="computerpara" class="para">Lorem ipsum dolor sit amet
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia laborum provident vitae repellendus, deserunt nisi, minus cumque distinctio veniam quae ut cupiditate ducimus nemo repellat! Reiciendis aperiam atque ex sed, ducimus eum laudantium? consectetur adipisicing elit. Tempore natus expedita libero, odit sint iusto animi facilis mollitia cumque eaque provident consectetur molestiae, ut doloremque repellendus maxime quis voluptas alias!  </p>
+    </div>
+    <div id="stationary" class="item">
+        <h3>stationary</h3>
+        <p id="stationarypara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia ad, eaque perspiciatis excepturi labore nemo doloremque provident nostrum cum aperiam accusamus, blanditiis voluptas enim maxime esse iusto tempore perferendis.
+            
+
+        </p>
+    </div>
+
+  </div>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
