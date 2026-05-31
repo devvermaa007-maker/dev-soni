@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/CSS/.javascript/Project.1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this is a css </title>
+
+  <style>
+    .nav .links{
+        display:inline-block;
+    }
+    .nav{
+        position: relative;
+        padding-bottom: 60px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        background-image: url(sunset.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .box{
+        background-color: rgb(222, 209, 135);
+        width: 20%;
+        padding: 7px 60px;
+        margin: 11px 10px;
+        text-align: center;
+        font-size: 18px;
+        border:2px solid black;
+        display: block;
+        border-radius: 18px;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 25px;
+    }
+    .navbar li a{
+        text-decoration: none;
+        color:black;
+        padding: 10px 20px;
+        margin: 32px 33px;
+        width: 100%;
+    }
+    .navbar li a:hover{
+        background-color: black;
+        color:white;
+        border-radius: 5px;
+    }
+    .links{
+        position:absolute;
+        right:34px;
+        top:20px;
+    }
+     .logo a{
+        text-decoration: none;
+        color:black;
+        font-size: 30px;
+    }
+    .logo a:hover{
+        color:rgb(255, 115, 0);
+    }
+    
+.box2{
+    background-color: rgb(222, 209, 135);
+    width: 20%;
+    padding: 7px 60px;
+    margin: 11px 10px;
+    text-align: center;
+    font-size: 18px;
+    border:2px solid black;
+    display: block;
+    border-radius: 18px;
+}
+.btn{
+
+    border-radius:18px;
+    background-color: white;
+    border:2px solid black;
+    
+
+
+}
+.btn:hover{
+    background-color: orangered;
+    color:white;
+}
+.box3{
+    background-color: rgb(222, 209, 135);
+    width: 20%;
+    padding: 7px 60px;
+    margin: 11px 10px;
+    text-align: center;
+    font-size: 18px;
+    border:2px solid black;
+    display: block;
+    border-radius: 18px;
+}
+.box3 input{
+    padding: 10px 20px;
+    border:2px solid black;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+</style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+        
+          
+            <div class="logo">
+                <a href="http://127.0.0.1:5500/CSS/.javascript/Project.1.html#"> Your LOGO</a>
+        
+            
+            
+        
+    <div class="links">
+                <ul class="navbar">
+                    <li><a href="http://127.0.0.1:5500/CSS/.javascript/Project.1.html#">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/CSS/.javascript/Project.1.html#">About</a></li>
+                    <li><a href="http://127.0.0.1:5500/CSS/.javascript/Project.1.html#">Contact</a></li>
+                    <li><a href="http://127.0.0.1:5500/CSS/.javascript/Project.1.html#">Services</a></li>
+                </ul>
+            </div>
+                  </div>
+        </div>
+        </nav>
+       
+        <main class="main">
+        <div class="box">
+            <h1>Welcome to my website</h1>
+            <p>this is my first project to improve my css and html knowledge and i improve this day by day with practice and one day i make my own website to my own business so that reson i
+
+            </p>
+            
+
+        </div>
+        <div class="box2">
+            <h1>this is my second box</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt natus dicta porro doloribus facere delectus harum? Libero, magnam similique voluptatum quia molestiae ducimus voluptas quas iusto n
+
+            </p>
+            </div>
+            <div class="box3">
+                <h1>LOGIN FORM</h1>
+                <form action="http://127.0.0.1:5500/CSS/.javascript/Project.1.html">
+                    <input type="text" placeholder="Username">
+                    <br><br>
+                    <input type="password" placeholder="Password">
+                    <br><br>
+                        <button class="btn">Login</button>
+                        </form>
+            
+                    </div>
+                
+            
+        
+        </main>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
