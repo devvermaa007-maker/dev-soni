@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://127.0.0.1:5500/CSS.PSEUDO.SLECTOR.HTML -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this is a css </title>
+
+  <style>
+    input{
+        display: block;;
+    }
+    .container{
+        display: block;
+        width:233px;
+        margin:auto;
+    }
+    input[type='text']{
+        padding:23px;
+        border:2px solid red;
+    }
+    a[target]{
+        font-size: 14px;
+        color:rgb(150, 130, 238);
+    }
+
+a[target='_self']{
+        font-size: 44px;
+        color:rgb(213, 238, 130);
+    }
+    input[type='email']{
+        color:black
+        border:2px solid blue;
+    }
+    li:nth-child(3){
+        color:rgb(0, 102, 128);
+    }
+    li:nth-child(2){
+        color:rgb(124, 128, 0);
+    }
+    li:nth-child(odd){
+        color:rgb(96, 0, 128);
+    }
+
+   
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="https://google.com/" target="_blank">go to google</a></h1>
+        <h1><a href="https://facebook.com/" target="_self">go to facebook</a></h1>
+        <form action="http://127.0.0.1:5500/CSS.PSEUDO.SLECTOR.HTML">
+            <input type="text" placeholder="enter your name">
+            <input type="email" placeholder="enter your email">
+            <input type="password" placeholder="enter your password">
+            <input type="submit" value="submit">
+        <ul>
+            <li class="item">item1</li>
+            <li class="item">item2</li>
+            <li class="item">item3</li>
+            <li class="item">item4</li>
+            <li class="item">item5</li>
+        </ul>
+    </form></div>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

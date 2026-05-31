@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:5500/CSS.flexbox.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+  <style>
+  /*flexbox is a powerful layout module in CSS that allows you to create flexible and responsive layouts. 
+  It provides an efficient way to align and distribute space among items in a container, even when their size is unknown or dynamic.
+ The main idea behind flexbox is to give the container the ability to alter its items' width, height, and order to best fill the available space. */
+.container{
+    height: 544px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    /* flex property for flex conatainer*/
+    flex-direction: row;/*default value is row, it arranges the flex items in a horizontal line from left to right. */
+  /*  flex-direction: column;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;*/
+  /*  flex-wrap: wrap;*/
+  /*  flex-flow:row-reverse wrap*/
+ /* justify-content: center;justify-content is a CSS property that is used to align and distribute space between items along the main axis of a flex container. The main axis is determined by the flex-direction property, which can be set to either row (horizontal) or column (vertical). 
+  justify-content: space-between;justify-content: space-between; will distribute the items evenly along the main axis, with the first item at the start of the container and the last item at the end of the container. The remaining items will be spaced evenly between them. 
+  justify-content: space-evenly;justify-content: space-evenly; will distribute the items evenly along the main axis, with equal space between all items, including the first and last items. This means that the space before the first item and after the last item will be the same as the space between the items. 
+justify-content: space-around;justify-content: space-around; will distribute the items evenly along the main axis, with equal space around each item. This means that the space before the first item and after the last item will be half of the space between the items. 
+align-items: center;align-items is a CSS property that is used to align items along the cross axis of a flex container. The cross axis is perpendicular to the main axis, which is determined by the flex-direction property. 
+align-items: flex-start;align-items: flex-start; will align the items at the start of the cross axis. For example, if the flex-direction is row, the items will be aligned at the top of the container. If the flex-direction is column, the items will be aligned at the left of the container. 
+align-items: stretch;align-items: stretch; will stretch the items to fill the container along the cross axis. For example, if the flex-direction is row, the items will stretch to fill the height of the container. If the flex-direction is column, the items will stretch to fill the width of the container. */
+    
+}
+.item { 
+
+    width:150px;
+    height: 150px;
+    background-color: lightcoral;
+    border:2px solid red;
+    margin:10px;
+    padding:3px;
+}
+#item-1{
+    order: 2;
+    flex-grow: 3;
+    flex-shrink: 2;
+}
+#item-2{
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 3;
+    flex-basis: 100px;/*flex-basis is a CSS property that is used to specify the initial size of a flex item before any available space is distributed according to the flex-grow and flex-shrink properties. It can be set to a specific length (e.g., 100px) or to auto, which means that the size of the item will be based on its content. */
+}
+#item-3{
+    order: 3;
+    
+    flex: 2 2 230px
+    align-self: flex-end;/*align-self is a CSS property that is used to override the align-items property for a specific flex item. It allows you to align a single item differently from the other items in the flex container. The possible values for align-self are the same as those for align-items, such as flex-start, flex-end, center, baseline, and stretch. */
+}
+    
+  </style>
+</head>
+
+<body>
+  
+
+<h1>THIS IS A FLEXBOX EXAMPLE</h1>
+<div class="container">
+  
+<div class="item" id="item-1">first box</div>
+<div class="item" id="item-2">second box</div>
+<div class="item" id="item-3">third box</div>
+<div class="item" id="item-4">fourth box</div>
+<div class="item" id="item-5">fifth box</div>
+<div class="item" id="item-6">sixth box</div>
+
+  
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</div></body></html>

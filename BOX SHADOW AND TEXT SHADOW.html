@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/CSS.box.shadow.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOX SHADOW AND TEXT SHADOW </title>
+
+  <style>
+    .container{
+        display:flex;
+    }
+    .card{
+        padding:23px 12px;
+        margin: 23px 12px;
+        border: 2px solid rgb(255, 251, 0);
+        background-color: burlywood;
+      /*  box-shadow: offset-x offset-y blur-radius spread-radius color;*/
+       /* box-shadow: 10px 13px green;
+       /*box-shadow: -10px -13px green;;*/
+        /*  box-shadow: 7px 5px 10px green;*/
+       /*   box-shadow: -7px -5px 10px green;*/
+         /*   box-shadow:-7px -5px 10px 34px rgba(71,172,172,0.5);*/
+         box-shadow: 3px 3px rgb(0, 128, 90),4px 6px rgb(255, 217, 0);
+
+
+    }
+    .card h2{
+        text-shadow: 2px 3px silver;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="card" id="card1">
+
+       <h2>THIS IS BOX SHADOW</h2>
+       <p>kjddnvvk jd oidfof uidsoj di sid8e fwksjc iusyf o fowufwof wyf wief ief fdhc iufy fifywpu weiuiedi iweuwh fwodweywuo foiuofuiii ffwuofud woefuLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+    <div class="card" id="card2">
+        <h2>THIS IS TEXT SHADOW</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+
+    </div>
+    <div class="card" id="card3">
+        <h2>Card 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+
+    </div>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

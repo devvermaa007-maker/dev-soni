@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://127.0.0.1:5500/CSS.BEFORE.AND.AFTER.PSEUDO.SLECTOR.HTML -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this is a BEFORE AND AFTER PASEUDO SLECTOR</title>
+ <link href="./this is a BEFORE AND AFTER PASEUDO SLECTOR_files/Dancing+Script" rel="stylesheet">
+
+  <style>
+    body{
+        margin:0px;
+        background-color: black;
+        color:white;
+        padding: 0px;
+   background-image:url('https://unsplash.com/photos/red-torii-gate-leading-to-a-japanese-street-zasdv7_-Emg');
+    }
+    header::before{
+        
+        content:;
+        position: absolute;
+        width:100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.5;
+    
+
+
+    }
+    section{
+        font-family: 'Dancing Script', cursive;
+     /*   border:2px solid red;*/
+        display: flex;
+        flex-direction: column;
+        margin:3px 23px;
+        align-items:center;
+        justify-content: center;
+
+        
+    }
+  /*  section::before{
+        content:"this is a content";
+
+
+    }
+        */
+        /*
+        section::after{
+        content:"this is a content";
+        }
+        */
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 4rem;
+        }
+    .navigation{
+        font-family: 'Dancing Script', cursive;     
+        
+        font-size: 10px;
+       display:flex;
+
+    }
+    li{
+        list-style: none;
+        padding:50px 23px;
+        
+        font-size: 25px;
+
+    }
+
+
+   
+  </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">HOME</li>
+                <li class="item">ABOUT</li>
+                <li class="item">SERVICE</li>
+                <li class="item">CONTACT US</li>
+            </ul>
+        </nav>
+        <section>
+            <h1>this is a heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate modi labore ducimus molestiae tempora consectetur numquam fugit ratione quaerat, voluptatem, alias quibusdam sunt accusantium fugiat hic officia porro neque!</p>
+        </section>
+    </header>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/CSS-diplay.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display property </title>
+
+  <style>
+    header{
+        
+        margin: auto;
+        border:2px solid brown;
+        width: 20%;
+
+    }
+    img{
+        margin: auto;
+        display: block;
+
+        width:34px;
+    }
+    h3{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin:0px;
+        text-align: center;
+
+    }
+    .box{
+        border:4px solid black;
+        background-color: grey;
+        margin:4px auto ;
+        padding:23px ;
+        display: inline-block;
+        width: 25%;
+        box-sizing: border-box;
+
+
+    }
+    .container{
+        margin:  3px auto;
+        display:inline-block;
+        width: 1200px;
+    }
+  </style>
+</head>
+
+<body>
+    <header class="top">
+        
+        <img src="./CSS Display property_files/OIP.Q9olQj4vnfLaXVuQSRPouwHaDt" alt="">
+        <h3> welcome to my blog</h3>
+    </header>
+<div class="container">
+    <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui velit veniam nihil, magnam a quibusdam cupiditate odio nulla nostrum. Ad, animi illum consectetur repudiandae nemo nesciunt excepturi iste nam. Modi sapiente debitis accusantium eveniet!</p>
+
+    </div>
+    <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia commodi, dolorem, esse nam aspernatur animi similique, iusto velit quas eum aut consequatur. Quos, ab! Natus possimus amet distinctio eligendi. Ullam deserunt rem explicabo.</p>
+
+    </div>
+    <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia commodi, dolorem, esse nam aspernatur animi similique, iusto velit quas eum aut consequatur. Quos, ab! Natus possimus amet distinctio eligendi. Ullam deserunt rem explicabo.</p>
+
+    </div>
+    <div class="box">
+        <h4 class="heading">Heading</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos mollitia commodi, dolorem, esse nam aspernatur animi similique, iusto velit quas eum aut consequatur. Quos, ab! Natus possimus amet distinctio eligendi. Ullam deserunt rem explicabo.</p>
+
+    </div>
+</div>
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
